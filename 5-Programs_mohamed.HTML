@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Programs and Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .program, .course {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .program-title, .course-title {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>University Programs and Courses</h1>
+</header>
+
+<div class="container">
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Search courses or programs..." oninput="filterContent()">
+    </div>
+
+    <div id="programs">
+        <div class="program">
+            <div class="program-title">Bachelor's Degree in Computer Science</div>
+            <p>Explore our undergraduate programs including Bachelor's degrees in various majors.</p>
+            <div class="course">
+                <div class="course-title">Introduction to Programming</div>
+                <p>Description: Learn the basics of programming with hands-on examples and exercises.</p>
+            </div>
+            <div class="course">
+                <div class="course-title">Data Structures</div>
+                <p>Description: Dive deeper into organizing and managing data efficiently.</p>
+            </div>
+        </div>
+
+        <div class="program">
+            <div class="program-title">Master's Degree in Business Administration</div>
+            <p>Our graduate programs include Master's and Doctoral degrees catered to your needs.</p>
+            <div class="course">
+                <div class="course-title">Organizational Behavior</div>
+                <p>Description: Study the impact of individuals and groups within an organization's setting.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Course Schedule</h2>
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+        <tr>
+            <td>Introduction to Programming</td>
+            <td>01/15/2024</td>
+            <td>10:00 AM - 12:00 PM</td>
+        </tr>
+        <tr>
+            <td>Organizational Behavior</td>
+            <td>02/20/2024</td>
+            <td>1:00 PM - 3:00 PM</td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    function filterContent() {
+        const query = document.getElementById('search').value.toLowerCase();
+        const programs = document.getElementById('programs').children;
+
+        Array.from(programs).forEach(program => {
+            const title = program.querySelector('.program-title').textContent.toLowerCase();
+            const courses = program.querySelectorAll('.course');
+
+            let match = title.includes(query);
+            Array.from(courses).forEach(course => {
+                const courseTitle = course.querySelector('.course-title').textContent.toLowerCase();
+                const isVisible = courseTitle.includes(query);
+                course.style.display = isVisible ? 'block' : 'none';
+                match = match || isVisible;
+            });
+
+            program.style.display = match ? 'block' : 'none';
+        });
+    }
+</script>
+
+</body>
+</html>

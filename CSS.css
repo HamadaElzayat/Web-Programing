@@ -1,0 +1,193 @@
+ .container{
+    width: 90%;
+    margin: auto;
+    height: 30px;
+ }
+
+ .header{
+    /* background: gray; */
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+ }
+ 
+ .nav{
+    width: 60%;
+    float: right;
+    list-style: none;
+ }
+  .nav li {
+    display: inline-block;
+    text-align: right;
+ }
+   .nav li a{
+    color: white;
+    text-decoration: none;
+    padding: 20px 15px;
+    font-size: 15px;
+    
+   }         
+   .home{
+    height: 100vh;
+    background-image: url(../image/ddc632867714c52a74da4cbae58d011d.jpg!w700wp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+   }
+   .home-content{
+    /* background: green; */
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform:translate(-80%,-150%);
+    text-align: center;
+   }
+   .home .title{
+    color:white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+   }
+   .home .btn{
+    width: 160px;
+    padding: 15px 0;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-size: 20px;
+   }
+   .home .btn-start{
+    margin-right: 10px;
+    background: white;
+   }
+   .home .btn-learn{
+    background: green;
+    color: white;
+   }
+   .hover-opacity{
+    transition: opacity 1s;
+   }
+   .hover-opacity:hover{
+    opacity: 0.8;
+   }
+   .section-header{
+    height: 100vh;
+    text-align: center;
+    background-image: url(../image/download.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+   }
+   .pd-y{
+    padding: 120px 0;
+   }
+
+   .section-header .section-title{
+     font-size: 35px;
+    text-transform: capitalize;
+    color: aliceblue;
+    background: gray;
+    padding: 10px;
+    text-transform: capitalize;
+    
+   }   
+   .line{
+    color: white;
+    text-align:left;
+    position: absolute;
+    top: 50%;
+    transform:translate(-100%,-100%);
+    margin: 0 auto 70px auto;
+    padding: 20px;
+    word-spacing: 2px;
+   }
+   .section-colleges{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: -200px;
+   }
+   .section-colleges .section-home{
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+   }
+   .section-colleges .code{
+    display: block;
+    height: 5px;
+    width: 60px;
+    background-color: blue;
+    margin: 0 auto 30px auto;
+   }
+   .colleges{
+    
+   }
+   .colleges-content{
+    overflow: hidden;  
+   }
+   .colleges-item{
+    width: 25%;
+    float: left;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    padding: 30px 15px;
+    margin-bottom: 100px;
+   }
+
+   .colleges-item:hover{
+    background:#899;
+   }
+
+   .colleges-item.mg{
+    margin: 0 5%;
+   }
+    .colleges-item .icon{
+        color:brown;
+        margin-bottom: 10px;
+
+    }
+    .colleges-item-title{
+        text-transform:capitalize;
+        margin-bottom: 10px;
+    }
+    .colleges-item-desc{
+        line-height: 1,6;
+        margin-bottom: 10px;
+    }
+    .colleges-item-link{
+        color:blue;
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+    .portfolio{
+        /* background: #e8e8e8; */
+        margin-top: 10%;
+    }
+    .portfolio-content{
+        overflow: hidden;
+    }
+    .portfolio-item{
+        width: 30%;
+        float: left;
+        margin-bottom: 20px;
+        height: auto;
+        text-align: center;
+     
+    }
+    
+    .portfolio-item img{
+        width: 100%
+        min-content
+        
+        
+    }
+    
+    .portfolio-item.mg{
+        margin: 3 2.5% 
+        
+        
+    }
+
+
+
+
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            height: 650px;
+            background: url(image/login_hamada.jpg)no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment:scroll;
+        }
+
+        .login-container {
+            background:rgb(255, 240, 247);
+            padding: 20px 50px;
+            border:2px solid rgb(94, 255, 0);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-container h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 5px double #ccc;
+            border: 5px solid;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .btn {
+            background-color:blue;
+            color:white;
+            border: soild;
+            padding: 10px 15px;
+            cursor: pointer;
+            width: 75%;
+            
+        }
+
+        .note {
+            margin-top: 5px;
+            font-size: 15px;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>login</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name"placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email"placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password"placeholder="Re-enter your password">
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <p class="note">All fields are required.</p>
+    </div>
+</body>
+</html>
